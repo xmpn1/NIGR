@@ -1,0 +1,119 @@
+local Playr = game:GetService("Players")
+local Run = game:GetService("RunService")
+local Core = game:GetService("CoreGui")
+local LocalPlayer = Playr.LocalPlayer
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/IreXion-UI-Library/main/IreXion%20UI%20Library"))()
+
+local Gui = Library:AddGui({
+	Title = {"A4", "Hub"},
+	ThemeColor = Color3.fromRGB(255,173,56),
+	ToggleKey = Enum.KeyCode.RightShift,
+})
+
+local Tab = Gui:AddTab("Main")
+
+local Category = Tab:AddCategory("Main")
+
+local Label = Category:AddLabel("Made by strelyal v kazani#1833")
+
+local Button = Category:AddButton("Enable FE Car", function()
+	LocalPlayer.Character.Humanoid.WalkSpeed=70 LocalPlayer.Character.Humanoid.JumpPower=0.0001 Float_Height="-1.03" AnimationId="129342287" local a=Instance.new("Animation") a.AnimationId="rbxassetid://"..AnimationId local a=LocalPlayer.Character.Humanoid:LoadAnimation(a) a:Play() a:AdjustSpeed(1) for a,a in pairs(LocalPlayer.Character:GetDescendants())do if a.ClassName=="Part"then a.CustomPhysicalProperties=PhysicalProperties.new(0,0,0)end end local a=1 G=game _=wait p=G:GetService("Players").LocalPlayer.Character p:FindFirstChild("Humanoid").HipHeight=Float_Height _(1.5) t=.4 for a=1,a do repeat p:FindFirstChild("Humanoid").HipHeight=Float_Height-n _(t) p:FindFirstChild("Humanoid").HipHeight=Float_Height+n _(t)until p:FindFirstChild("Humanoid").Health==0 end
+end)
+
+local Category = Tab:AddCategory("Settings")
+
+local Box = Category:AddBox("Slide", function(str)
+	for a,a in pairs(LocalPlayer.Character:GetDescendants())do if a.ClassName=="Part"then a.CustomPhysicalProperties=PhysicalProperties.new(str,0,0)end end 
+end)
+
+local Box = Category:AddBox("Hipheight", function(str)
+	Float_Height=str local a=1 G=game _=wait p=G:GetService("Players").LocalPlayer.Character p:FindFirstChild("Humanoid").HipHeight=Float_Height _(1.5) t=.4 for a=1,a do repeat p:FindFirstChild("Humanoid").HipHeight=Float_Height-n _(t) p:FindFirstChild("Humanoid").HipHeight=Float_Height+n _(t)until p:FindFirstChild("Humanoid").Health==0 end
+end)
+
+local Slider = Category:AddSlider("Walkspeed", 1, 500, 16, function(val)
+	LocalPlayer.Character.Humanoid.WalkSpeed = val
+end)
+
+local Category = Tab:AddCategory("Settings Presets")
+
+local Button = Category:AddButton("Default Car Settings Preset", function()
+	for a,a in pairs(LocalPlayer.Character:GetDescendants())do if a.ClassName=="Part"then a.CustomPhysicalProperties=PhysicalProperties.new(0,0,0)end end
+	LocalPlayer.Character.Humanoid.WalkSpeed = 70
+	Float_Height="-1.03" local a=1 G=game _=wait p=G:GetService("Players").LocalPlayer.Character p:FindFirstChild("Humanoid").HipHeight=Float_Height _(1.5) t=.4 for a=1,a do repeat p:FindFirstChild("Humanoid").HipHeight=Float_Height-n _(t) p:FindFirstChild("Humanoid").HipHeight=Float_Height+n _(t)until p:FindFirstChild("Humanoid").Health==0 end
+end)
+
+local Button = Category:AddButton("Extreme Car Settings Preset", function()
+	for a,a in pairs(LocalPlayer.Character:GetDescendants())do if a.ClassName=="Part"then a.CustomPhysicalProperties=PhysicalProperties.new(0.5,0,0)end end
+	LocalPlayer.Character.Humanoid.WalkSpeed = 500
+	Float_Height="-1.03" local a=1 G=game _=wait p=G:GetService("Players").LocalPlayer.Character p:FindFirstChild("Humanoid").HipHeight=Float_Height _(1.5) t=.4 for a=1,a do repeat p:FindFirstChild("Humanoid").HipHeight=Float_Height-n _(t) p:FindFirstChild("Humanoid").HipHeight=Float_Height+n _(t)until p:FindFirstChild("Humanoid").Health==0 end
+end)
+
+if game.PlaceId == 142823291 then
+local Tab = Gui:AddTab("Murder Mystery 2")
+
+local Category = Tab:AddCategory("Script")
+local Button = Category:AddButton("Eclipse", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Ethanoj1/EclipseMM2/master/Script", true))()
+end)
+end
+
+local Tab = Gui:AddTab("Discord")
+
+local Category = Tab:AddCategory("Discord")
+
+local Button = Category:AddButton("Join Discord", function()
+    setclipboard("https://discord.gg/hsdcAFZY9E")
+    Library:Notify("Invite prompted! If it did not work the invite was copied to your clipboard.")
+    local json = {
+   ["cmd"] = "INVITE_BROWSER",
+   ["args"] = {
+       ["code"] = "hsdcAFZY9E"
+   },
+   ["nonce"] = 'a'
+}
+spawn(function()
+   print(syn.request({
+       Url = 'http://127.0.0.1:6463/rpc?v=1',
+       Method = 'POST',
+       Headers = {
+           ['Content-Type'] = 'application/json',
+           ['Origin'] = 'https://discord.com'
+       },
+       Body = game:GetService('HttpService'):JSONEncode(json),
+   }).Body)
+end)
+end)
+
+local Tab = Gui:AddTab("Close")
+
+local Category = Tab:AddCategory("Close")
+
+local Button = Category:AddButton("Close GUI", function()
+	Core["FE Car Made by Lozarth"]:Destroy()
+end)
+
+Library:Notify("Join Discord server?", function(bool)
+	if bool == true then
+		setclipboard("https://discord.gg/hsdcAFZY9E")
+    Library:Notify("Invite prompted! If it did not work the invite was copied to your clipboard.")
+    local json = {
+   ["cmd"] = "INVITE_BROWSER",
+   ["args"] = {
+       ["code"] = "hsdcAFZY9E"
+   },
+   ["nonce"] = 'a'
+}
+spawn(function()
+   print(syn.request({
+       Url = 'http://127.0.0.1:6463/rpc?v=1',
+       Method = 'POST',
+       Headers = {
+           ['Content-Type'] = 'application/json',
+           ['Origin'] = 'https://discord.com'
+       },
+       Body = game:GetService('HttpService'):JSONEncode(json),
+   }).Body)
+end)
+end
+end)

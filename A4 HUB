@@ -58,6 +58,16 @@ local Button = Category:AddButton("Eclipse", function()
 end)
 end
 
+if game.PlaceId == 286090429 then
+local Tab = Gui:AddTab("Arsenal")
+
+local Category = Tab:AddCategory("Script")
+
+local Button = Category:AddButton("Dark Hub", function()
+	loadstring(game:HttpGet("https://darkhub.xyz/remote-script.lua", true))()
+end)
+end
+
 local Tab = Gui:AddTab("Discord")
 
 local Category = Tab:AddCategory("Discord")
